@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Andromeda Market Pro</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 15px; }
+        .card { background: white; padding: 15px; margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+        .btn { background: #ff9900; color: white; padding: 12px; border: none; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .admin { background: #fff; padding: 20px; border-radius: 15px; margin-top: 30px; border: 2px dashed #ff9900; }
+        input, select { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        h1 { text-align: center; color: #333; }
+    </style>
+</head>
+<body>
+
+    <h1>🌌 Andromeda Market</h1>
+
+    <div id="shop"></div>
+
+    <div class="card">
+        <h3>🛒 سلة المشتريات: <span id="total">0</span> DH</h3>
+        <button class="btn" onclick="checkout()">إتمام الطلب عبر واتساب</button>
+    </div>
+
+    <div class="admin">
+        <h2>⚙️ لوحة التحكم (إضافة منتج)</h2>
+        <input id="pName" placeholder="اسم المنتج">
+        <input id="pPrice" type="number" placeholder="الثمن (DH)">
+        <input id="pImg" placeholder="رابط الصورة المباشر (Direct Link)">
+        <select id="pCat">
+            <option value="ملابس">ملابس</option>
+            <option value="أحذية">أحذية</option>
+            <option value="رياضة">رياضة</option>
+        </select>
+        <button class="btn" onclick="addItem()">إضافة المنتج للمتجر</button>
+    </div>
+
+    <script>
+        let products = JSON.parse(localStorage.getItem('prods')) || [];
+        let cart = [];
+
+        function addItem() {
+            let p = {
+                name: document.getElementById('pName').value,
+                price: document.getElementById('pPrice').value,
+                img: document.getElementById('pImg').value,
+                cat: document.getElementById('pCat').value
+            };
+            if(!p.name || !p.price || !p.img) return alert("المرجو ملء جميع الخانات!");
+            products.push(p);
+            localStorage.setItem('prods', JSON.stringify(products));
+            render();
+        }
+
+        function render() {
+            document.getElementById('shop').innerHTML = products.map((p, i) => `
+                <div class="card">
+                    <img src="${p.img}">
+                    <h3>${p.name}</h3>
+                    <p>القسم: ${p.cat} | الثمن: ${p.price} DH</p>
+                    <button class="btn" onclick="addToCart(${i})">أضف للسلة</button>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(i) {
+            cart.push(products[i]);
+            let total = cart.reduce((sum, p) => sum + parseInt(p.price), 0);
+            document.getElementById('total').innerText = total;
+            alert("تمت إضافة " + products[i].name + " للسلة!");
+        }
+
+        function checkout() {
+            if(cart.length === 0) return alert("السلة فارغة!");
+            let msg = "أريد طلب المنتجات التالية: " + cart.map(p => p.name).join(', ');
+            window.location.href = "https://wa.me/212649766611?text=" + encodeURI(msg);
+        }
+        render();
+    </script>
+</body>
+</html>
