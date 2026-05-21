@@ -1,75 +1,41 @@
-
-        .cat-2 { border-right: 5px solid #9c27b0; }
-        .cat-3 { border-right: 5px solid #3f51b5; }
-        .cat-4 { border-right: 5px solid #00bcd4; }
-        .cat-5 { border-right: 5px solid #4caf50; }
-        .cat-6 { border-right: 5px solid #ffeb3b; }
-
-        .category { margin-bottom: 15px; padding: 15px; background: #f9f9f9; border-radius: 8px; }
-        .info-box { background: #333; padding: 20px; border-radius: 8px; color: white; margin-top: 30px; text-align: center; }
-        
-        /* Dark Mode تلقائي */
-        @media (prefers-color-scheme: dark) {
-            body { background-color: #121212; color: #eee; }
-            .category { background-color: #1e1e1e; }
-        }
-    </style>
-</head>
-<body>
-
-    <h1 class="brand-name">
-        <span class="andromeda">Andromeda</span> <span class="market">Market</span>
-    </h1>
-
-    <section>
-        <div class="category cat-1"><h2>الملابس</h2></div>
-        <div class="category cat-2"><h2>الأحذية</h2></div>
-        <div class="category cat-3"><h2>الإكسسوارات</h2></div>
-        <div class="category cat-4"><h2>الإلكترونيات</h2></div>
-        <div class="category cat-5"><h2>مستلزمات البيت</h2></div>
-        <div class="category cat-6"><h2>عروض خاصة</h2></div>
-    </section>
-
-    <div class="info-box">
-        <h3>تواصل معنا: 0649766611</h3>
-        <p>🚚 الدار البيضاء مجانًا (ما عدا السبت والأحد) | باقي المدن 50 درهم</p>
-        <hr>
-        <p>© 2026 Andromeda Market. جميع الحقوق محفوظة.</p>
-        <p>تصميم وتطوير بواسطة أندروما ماركت</p>
-    </div>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Andromeda Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromeda Market | أندروما ماركت</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
-        .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 10px; }
-        h1 { color: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f9; text-align: center; }
+        header { background: #333; color: white; padding: 20px; }
+        .cat-title { font-size: 1.5em; margin: 25px 0 10px; color: #ff5722; border-bottom: 2px solid #ff5722; display: inline-block; padding-bottom: 5px; }
+        .product-card { background: white; margin: 10px auto; padding: 15px; width: 80%; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-right: 5px solid #ff5722; }
+        .footer { background: #222; color: white; padding: 30px 10px; margin-top: 40px; }
+        .btn-wa { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <h1>مرحباً بكم في Andromeda Market</h1>
+    <header>
+        <h1>Andromeda Market | أندروما ماركت</h1>
+    </header>
 
-    <div class="section">
-        <h2>الملابس</h2>
-    </div>
-    <div class="section">
-        <h2>الأحذية</h2>
-    </div>
-    <div class="section">
-        <h2>الإكسسوارات</h2>
-    </div>
+    <h2 class="cat-title">👕 الملابس | Clothing</h2>
+    <div class="product-card"><h3>قميص صيفي | Summer Shirt</h3><p>الثمن: 150 درهم</p></div>
 
-    <hr>
-    <p>📞 للطلب تواصل معنا عبر الواتساب: 0649766611</p>
-    <p>🚚 الشحن: الدار البيضاء (مجاناً) | باقي المدن (50 درهم)</p>
+    <h2 class="cat-title">👟 الأحذية | Shoes</h2>
+    <div class="product-card"><h3>حذاء رياضي | Sport Shoes</h3><p>الثمن: 300 درهم</p></div>
+
+    <h2 class="cat-title">⌚ الإكسسوارات | Accessories</h2>
+    <div class="product-card"><h3>ساعة يد ذكية | Smart Watch</h3><p>الثمن: 200 درهم</p></div>
+
+    <div class="footer">
+        <h3>للتواصل والطلب عبر الواتساب:</h3>
+        <a href="https://wa.me/212649766611" class="btn-wa">تواصل معنا الآن 0649766611</a>
+        <p style="margin-top:20px;">🚚 <b>سياسة الشحن:</b></p>
+        <p>الدار البيضاء: مجاناً (يومي السبت والأحد فقط)</p>
+        <p>باقي المدن: 50 درهم (كل يوم)</p>
+        <p>© 2026 Andromeda Market. جميع الحقوق محفوظة.</p>
+    </div>
 
 </body>
 </html>
-h2>الملابس</h2>
-إلى: <h2>الملابس</h2> <p>قميص أبيض - 150 درهم</p>
