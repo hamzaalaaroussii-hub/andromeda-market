@@ -5,36 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andromeda Market | أندروما ماركت</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f9; text-align: center; }
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; text-align: center; }
         header { background: #333; color: white; padding: 20px; }
-        .cat-title { font-size: 1.5em; margin: 25px 0 10px; color: #ff5722; border-bottom: 2px solid #ff5722; display: inline-block; padding-bottom: 5px; }
-        .product-card { background: white; margin: 10px auto; padding: 15px; width: 80%; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-right: 5px solid #ff5722; }
-        .footer { background: #222; color: white; padding: 30px 10px; margin-top: 40px; }
-        .btn-wa { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px; }
+        .section { margin: 30px auto; width: 90%; }
+        .cat-title { color: #ff5722; border-bottom: 2px solid #ff5722; display: inline-block; padding: 5px 15px; margin-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .product-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-right: 5px solid #ff5722; }
+        .footer { background: #222; color: white; padding: 30px; margin-top: 40px; }
+        .btn-wa { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Andromeda Market | أندروما ماركت</h1>
-    </header>
+    <header><h1>Andromeda Market | أندروما ماركت</h1></header>
 
-    <h2 class="cat-title">👕 الملابس | Clothing</h2>
-    <div class="product-card"><h3>قميص صيفي | Summer Shirt</h3><p>الثمن: 150 درهم</p></div>
+    <div class="section">
+        <h2 class="cat-title">👕 الملابس | Clothing</h2>
+        <div class="grid">
+            <div class="product-card"><h3>قميص صيفي</h3><p>150 درهم</p></div>
+        </div>
+    </div>
 
-    <h2 class="cat-title">👟 الأحذية | Shoes</h2>
-    <div class="product-card"><h3>حذاء رياضي | Sport Shoes</h3><p>الثمن: 300 درهم</p></div>
+    <div class="section">
+        <h2 class="cat-title">👟 الأحذية | Shoes</h2>
+        <div class="grid">
+            <div class="product-card"><h3>حذاء رياضي</h3><p>300 درهم</p></div>
+        </div>
+    </div>
 
-    <h2 class="cat-title">⌚ الإكسسوارات | Accessories</h2>
-    <div class="product-card"><h3>ساعة يد ذكية | Smart Watch</h3><p>الثمن: 200 درهم</p></div>
+    <div class="section">
+        <h2 class="cat-title">⌚ الإكسسوارات | Accessories</h2>
+        <div class="grid">
+            <div class="product-card"><h3>ساعة ذكية</h3><p>200 درهم</p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="cat-title">🔥 عروض خاصة | Special Offers</h2>
+        <div class="grid">
+            <div class="product-card"><h3>تخفيضات نهاية الأسبوع</h3><p>تصفح كل التخفيضات</p></div>
+        </div>
+    </div>
 
     <div class="footer">
-        <h3>للتواصل والطلب عبر الواتساب:</h3>
-        <a href="https://wa.me/212649766611" class="btn-wa">تواصل معنا الآن 0649766611</a>
-        <p style="margin-top:20px;">🚚 <b>سياسة الشحن:</b></p>
-        <p>الدار البيضاء: مجاناً (يومي السبت والأحد فقط)</p>
-        <p>باقي المدن: 50 درهم (كل يوم)</p>
-        <p>© 2026 Andromeda Market. جميع الحقوق محفوظة.</p>
+        <h3>للطلب والاستفسار:</h3>
+        <a href="https://wa.me/212649766611" class="btn-wa">تواصل معنا عبر الواتساب</a>
+        <p style="margin-top:20px;">🚚 التوصيل مجاني بالدار البيضاء (السبت والأحد) | 50 درهم لباقي المدن</p>
     </div>
 
 </body>
